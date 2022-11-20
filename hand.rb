@@ -8,6 +8,9 @@ class Hand
     @cards = hand_array.map { |card| Card.new(card[:value], card[:suit]) }
   end
 
-  
+  # simple method which retruns hand as an array 
+  def to_a
+    hand_array
+  end 
 
 end 
