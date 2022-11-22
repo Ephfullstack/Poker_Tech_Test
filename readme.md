@@ -1,6 +1,6 @@
 # Poker Tech test  
 
-This is a Wondr Medical tech test desinged to rank multiple hands of cards in descending order.
+This is a Wondr Medical tech test designed to rank multiple hands of cards in descending order.
 
 ### Requirements
 
@@ -18,21 +18,26 @@ Please create a private GitHub repo for this task and commit your code. When you
 - Frank McKenna ([frank-mck](https://github.com/frank-mck))
 
 
-
-### Acceptance criteria
-
 ## Setting up the Application
-
-The program was written in ruby.
 
 
 ## Running the Program
 
-This Program runs within the IRB.
+This Program is run within the terminal.
 
-````
+in order to sort the hands by rank type "ruby run.rb" in the terminal and you should receive the cards being ranked as expressed:
 
-````
+
+Rank: 6, Card:[#<Card:0x00007f915d841d18 @rank=1, @suit="club">, #<Card:0x00007f915d841cf0 @rank=3, @suit="club">, #<Card:0x00007f915d841cc8 @rank=8, @suit="club">, #<Card:0x00007f915d841c78 @rank=9, @suit="club">, #<Card:0x00007f915d841c50 @rank=11, @suit="club">]
+
+
+Rank: 5, Card:[#<Card:0x00007f915d841a20 @rank=2, @suit="club">, #<Card:0x00007f915d8419f8 @rank=3, @suit="heart">, #<Card:0x00007f915d841930 @rank=5, @suit="spade">, #<Card:0x00007f915d841908 @rank=4, @suit="club">, #<Card:0x00007f915d8418b8 @rank=1, @suit="diamond">]
+
+
+Rank: 3, Card:[#<Card:0x00007f915d841fc0 @rank=5, @suit="heart">, #<Card:0x00007f915d841ef8 @rank=8, @suit="heart">, #<Card:0x00007f915d841ed0 @rank=1, @suit="spade">, #<Card:0x00007f915d841ea8 @rank=5, @suit="club">, #<Card:0x00007f915d841e80 @rank=5, @suit="diamond">]
+
+Rank: 3, Card:[#<Card:0x00007f915d841b88 @rank=2, @suit="diamond">, #<Card:0x00007f915d841b60 @rank=2, @suit="heart">, #<Card:0x00007f915d841b38 @rank=2, @suit="spade">, #<Card:0x00007f915d841ae8 @rank=6, @suit="club">, #<Card:0x00007f915d841a98 @rank=12, @suit="diamond">]
+
 
 ## Planning
 
@@ -69,7 +74,7 @@ Below is a JSON file representing the poker hands.
   ]
 ]
 
-The aims is to design a OOP which will take the poker hands and rank them in descending order. i will carry out this task by test driving functions and using multiple classes. The classes i will use include are
+The aims is to design a OOP which will take the poker hands and rank them in descending order. i will carry out this task by using multiple classes with methods. The classes i will use include are..
 
 *Card.rb
 
@@ -108,10 +113,12 @@ I have gone online to the resources located on https://en.wikipedia.org/wiki/Lis
 -rank values
 -suits
 
-I plan to organise this within the card class where i will diffrentiate each hand with its values.
+I plan to organ this within the card class where i will then differentiate  each hand with its values.
 
 
 
 ## Questions for the Employer?
 
--
+What would be the most desired output for the programme ?
+
+
