@@ -13,28 +13,28 @@ class Hand
     hand_array
   end 
 
-  #method retuns suit of all cards in hand 
-  def suits
-    card.map(&:Suit)
-  end 
+  def score
+    [hand_score, card_score].flatten
+  end
+  attr_reader :hand_array, :cards
 
-  #this method returns values of all cards in an hand 
-  def rank_values
-    cards.map(&:rank_value).sort
+  # this method return score of a hand.
+  def hand_score
+    scoring_hands.map.with_index { |scoring_hand, i| i if scoring_hand }.compact.max
   end
 
-  # this method return card value with no of occurances as an key value hash.
-  def rank_count_hash
-    rank_values.each_with_object(Hash.new(0)) { |value, count| count[value] += 1 }
+  # this method return score a card.
+  def card_score
+    five_high_straight? ? [5, 4, 3, 2, 1] : card_score_array
+  end
+  # this method return card score based on occurance of value of a card.
+  def card_score_array
+    rank_count_hash
+        .sort_by { |rank, count| [-count, -rank] }
+        .map { |count_rank_array| count_rank_array[0] }
   end
 
-   # method return no of occurrences of a value of a card as an array.
-
-   def rank_count_totals
-    rank_count_hash.values
-   end
-
-   # this method return hands rank methods and each method checks rank of a hand bases on poker rules.
+  # this method return hands rank methods and each method checks rank of a hand bases on poker rules.
 
   def scoring_hands
     [high_card?, one_pair?, two_pair?, three_of_a_kind?, five_high_straight?,
@@ -72,9 +72,26 @@ class Hand
   def straight_flush?
     straight? && flush?
   end
-  
 
+  # method return no of occurrences of a value of a card as an array.
 
+  def rank_count_totals
+    rank_count_hash.values
+  end
+
+  # this method return card value with no of occurances as an key value hash.
+  def rank_count_hash
+    rank_values.each_with_object(Hash.new(0)) { |value, count| count[value] += 1 }
+  end
+
+  #this method return values of all cards in an hand.
+  def rank_values
+    cards.map(&:rank_value).sort
+  end
+  #this method return suit of all cards in a hand.
+  def suits
+    cards.map(&:suit)
+  end
 
 
 end 
