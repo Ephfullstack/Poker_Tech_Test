@@ -15,5 +15,14 @@ class Poker
     end
   end
 
+  private
+  attr_reader :hands
+
+  # this method return hand with maximum score.
+  def highest_score
+    hands.map(&:score).max
+  end
+
+  
 
 end
