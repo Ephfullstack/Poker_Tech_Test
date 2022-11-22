@@ -32,3 +32,10 @@ data = [
         {"suit": "diamond", "value": 1}
     ]
 ]
+
+# Creating Instance of a poker by passing hand data as an argument to poker class initialize method.
+
+poker = Poker.new(data)
+
+# Calling poker class instance method which ranks hands.
+poker.rank_hands
