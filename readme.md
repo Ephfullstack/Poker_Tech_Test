@@ -17,10 +17,6 @@ Please create a private GitHub repo for this task and commit your code. When you
 - Dash Boyles ([Dash1704](https://github.com/Dash1704))
 - Frank McKenna ([frank-mck](https://github.com/frank-mck))
 
-
-## Setting up the Application
-
-
 ## Running the Program
 
 This Program is run within the terminal.
